@@ -16,3 +16,7 @@ test:
   override:
     - nohup python api.py &
     - pyresttest http://localhost:5000 api_smoke_tests.yml
+
+general:
+  artifacts:
+    - "nohup.out"
