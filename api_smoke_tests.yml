@@ -16,7 +16,7 @@
     - name: "Create/update todo"
     - url: "todos/todo1"
     - method: "PUT"
-    - body: '{'task': 'API Test'}'
+    - body: '{"task": "API Test"}'
     - headers: {'Content-Type': 'application/json'}
     - validators:  # This is how we do more complex testing!
         - compare: {header: content-type, comparator: contains, expected:'json'}
@@ -26,5 +26,5 @@
     - name: "Create todo"
     - url: "/todos"
     - method: "POST"
-    - body: '{'task': 'New Todo'}'
+    - body: '{"task": "New Todo"}'
     - headers: {Content-Type: application/json}
