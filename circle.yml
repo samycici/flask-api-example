@@ -9,8 +9,10 @@ dependencies:
     - pip install docker-compose==1.3.3
     - sudo apt-get install python-pycurl
     - pip install pyresttest
+    - pip install flask
+    - pip install Flask-RESTful
 
 test:
   override:
-    - docker-compose up -d && sleep 15
+    - python api.py
     - pyresttest http://localhost:5000 api_smoke_tests.yml
