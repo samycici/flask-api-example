@@ -13,11 +13,3 @@ dependencies:
 test:
   override:
     - docker-compose up -d && sleep 15
-    - python test/functional_tests.py
-  post:
-    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-    - find . -type f -regex ".*/test/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-
-general:
-  artifacts:
-    - "test/nosetests.xml"
