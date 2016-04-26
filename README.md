@@ -2,9 +2,9 @@
 
 To run a container for the application:
 
-```docker build -t api .```
+```docker build -t flaskapi .```
 
-```docker run -d -p 5000:5000  --name todo api```
+```docker run -d -p 5000:5000  --name api flaskapi```
 
 Or, with docker-compose:
 
