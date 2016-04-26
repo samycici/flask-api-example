@@ -7,14 +7,14 @@
     - url: "/todos"
 - test:
     - name: "Get single todo"
-    - url: "todos/todo3"
+    - url: "/todos/todo3"
 - test:
     - name: "Delete a single todo, verify that works"
-    - url: "todos/todo3"
+    - url: "/todos/todo3"
     - method: 'DELETE'
 - test: # create todo by PUT
     - name: "Create/update todo"
-    - url: "todos/todo1"
+    - url: "/todos/todo1"
     - method: "PUT"
     - body: '{"task": "API Test"}'
     - headers: {'Content-Type': 'application/json'}
