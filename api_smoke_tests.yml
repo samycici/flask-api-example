@@ -19,7 +19,7 @@
     - body: '{"task": "API Test"}'
     - headers: {'Content-Type': 'application/json'}
     - validators:  # This is how we do more complex testing!
-        - compare: {header: content-type, comparator: contains, expected:'json'}
+        - compare: {header: content-type, comparator: contains, expected: 'json'}
         - compare: {jsonpath_mini: 'task', expected: 'API Test'}  # JSON extraction
         - compare: {raw_body:"", comparator:contains, expected: 'API' }  # Tests on raw response
 - test: # create todo by POST
