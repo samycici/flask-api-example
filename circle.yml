@@ -7,15 +7,10 @@ machine:
 dependencies:
   override:
     - pip install docker-compose==1.3.3
+    - sudo apt-get install python-pycurl
     - pip install pyresttest
-    - pip install flask
-    - pip install Flask-RESTful
 
 test:
   override:
-    - nohup python api.py &
+    - docker-compose up -d && sleep 15
     - pyresttest http://localhost:5000 api_smoke_tests.yml
-
-general:
-  artifacts:
-    - "nohup.out"
